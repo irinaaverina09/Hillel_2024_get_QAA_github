@@ -1,59 +1,39 @@
 package HomeWork9;
 
-public enum Size {
-    Name("S", "M", "L"),
-    Width(5),
-    Length (7.9);
-    private String s;
-    private String m;
+        public enum Size {
+            SMALL("Tshort", 5.6, 7.8),
+            MEDIUM("Shorts", 3.5, 7.9),
+            LARGE("Dress", 5.6, 8.6);
 
-    private String l;
+            public String getName() {
+                return name;
+            }
 
-    private Integer width;
-    private Integer width () {
-        return width;
-    }
+            public Double getWidth() {
+                return width;
+            }
 
-    private Double length;
-    private Double length () {
-        return length;
-    }
-    Size(String s, String m, String l) {
-        this.s = s;
-        this.m = m;
-        this.l = l;
-    }
-    public String getSizeS () {
-        return s;
-    }
+            public Double getLength() {
+                return length;
+            }
 
+            @Override
+            public String toString() {
+                return "Size{" +
+                        "name='" + name + '\'' +
+                        ", width=" + width +
+                        ", length=" + length +
+                        '}';
+            }
 
-    public String getSizeM () {
-        return m;
-    }
+            private String name;
+            private Double width;
+            private Double length;
 
-    public String getSizeL () {
-        return l;
-    }
+            private Size(String name, Double width, Double length) {
+                this.name = name;
+                this.width = width;
+                this.length = length;
+            }
 
-    Size(Integer width){
-        this.width = width;
-    }
-    public Integer getWidth(){
-        return width;
-    }
-
-    public String toString(){
-        return name();
-    }
-
-    Size(Double length){
-        this.length = length;
-    }
-
-    public Double getLength(){
-        return length;
-    }
-
-
-}
+        }
